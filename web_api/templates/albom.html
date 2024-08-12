@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Albom Page</h1>
+        {% for alboms in albom %}
+             <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="{{ alboms.image }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ alboms.title }}</h5>
+                    <p class="card-text">{{ alboms.description }}</p>
+                  </div>
+                </div>
+              </div>
+         {% endfor %}
+    </div>
+{% endblock %}
